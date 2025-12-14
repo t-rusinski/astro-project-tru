@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import UsersList from "../components/UsersList";
+---
+
+<Layout title="Lista Użytkowników - 10x Astro Starter">
+  <div
+    class="relative w-full mx-auto min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 p-4 sm:p-8"
+  >
+    <div class="relative max-w-6xl mx-auto">
+      <!-- Header -->
+      <div
+        class="backdrop-blur-xl bg-gradient-to-b from-white/10 to-white/5 rounded-2xl shadow-2xl p-8 text-white border border-white/10 mb-6"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <h1
+              class="text-4xl sm:text-5xl font-bold mb-2 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 text-transparent bg-clip-text drop-shadow-lg"
+            >
+              Lista Użytkowników
+            </h1>
+            <p class="text-lg text-blue-100/90 drop-shadow-md">Zarządzaj użytkownikami swojej aplikacji</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Users List Component -->
+      <UsersList client:load />
+
+      <!-- Back to Home Link -->
+      <div class="mt-6 text-center">
+        <a href="/" class="inline-flex items-center gap-2 text-blue-200 hover:text-blue-100 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          <span>Powrót do strony głównej</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
